@@ -113,7 +113,7 @@ class DivisionSelectView(View):
         # レーン選択ビューを表示
         view = LaneSelectView(self.server_id, self.user_id,
                               self.name, self.rank, division)
-        await interaction.response.edit_message(content="出来ないレーンを選択してください", view=view)
+        await interaction.response.edit_message(content="希望レーンを選択してください", view=view)
 
 # --- レーン選択ビュー ---
 
