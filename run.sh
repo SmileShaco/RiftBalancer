@@ -1,11 +1,13 @@
 #!/bin/bash
 
 # 必要なディレクトリがなければ作成
-mkdir -p /data/player_list
-mkdir -p /data/teams
+mkdir -p data
+mkdir -p data/player_list
+mkdir -p data/teams
+mkdir -p log
 
 if [ -f .env ]; then
   export $(cat .env | xargs)
 fi
 
-nohup python3 bot.py > log/bot.log 2>&1 &
+python bot.py > log/bot.log
