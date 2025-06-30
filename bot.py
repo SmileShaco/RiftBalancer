@@ -445,7 +445,7 @@ async def clear(interaction: Interaction):
 # --- Bot起動 ---
 if __name__ == "__main__":
     load_dotenv()
-    TOKEN = os.getenv("DISCORD_BOT_TOKEN")  # 環境変数から取得、後で設定
+    TOKEN = os.environ["DISCORD_BOT_TOKEN"]  # 環境変数から取得、後で設定
     if not TOKEN:
         print("DISCORD_BOT_TOKENを環境変数に設定してください。")
     else:
